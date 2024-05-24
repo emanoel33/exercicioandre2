@@ -1,0 +1,25 @@
+<script>
+    // Recebe o nome do aluno
+var nome = prompt("Digite o nome do aluno:");
+
+// Recebe as três notas do aluno
+var nota1 = parseFloat(prompt("Digite a primeira nota:"));
+var nota2 = parseFloat(prompt("Digite a segunda nota:"));
+var nota3 = parseFloat(prompt("Digite a terceira nota:"));
+
+// Calcula a média aritmética
+var media = (nota1 + nota2 + nota3) / 3;
+
+// Determina a menção do aluno
+var mencao;
+if (media >= 7) {
+    mencao = "Aprovado";
+} else if (media <= 5) {
+    mencao = "Reprovado";
+} else {
+    mencao = "Recuperação";
+}
+
+// Exibe o nome do aluno e sua menção
+alert("Aluno: " + nome + "\nMenção: " + mencao + "\nMédia: " + media.toFixed(2));
+</script>

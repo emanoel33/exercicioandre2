@@ -1,0 +1,41 @@
+<script>
+    // Solicita o código do produto ao usuário
+var codigoProduto = prompt("Digite o código do produto:");
+
+// Converte o código do produto para número
+codigoProduto = parseInt(codigoProduto);
+
+// Define o preço unitário de acordo com o código do produto
+var precoUnitario;
+
+switch (codigoProduto) {
+    case 1001:
+        precoUnitario = 5.32;
+        break;
+    case 1324:
+        precoUnitario = 6.45;
+        break;
+    case 6548:
+        precoUnitario = 2.37;
+        break;
+    case 987:
+        precoUnitario = 5.32;
+        break;
+    case 7623:
+        precoUnitario = 6.45;
+        break;
+    default:
+        alert("Código de produto inválido!");
+        // Sai do programa se o código do produto for inválido
+        throw new Error("Código de produto inválido!");
+}
+
+// Solicita a quantidade comprada ao usuário
+var quantidadeComprada = parseInt(prompt("Digite a quantidade comprada:"));
+
+// Calcula o preço total devido pelo cliente
+var precoTotal = precoUnitario * quantidadeComprada;
+
+// Exibe o preço total devido pelo cliente
+alert("O preço total devido é: R$" + precoTotal.toFixed(2));
+</script>

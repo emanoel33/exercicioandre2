@@ -1,0 +1,79 @@
+<script>
+function ordenarValores(i, a, b, c) {
+    if (i === 1) {
+        // Escrever os valores em ordem crescente
+        if (a <= b && a <= c) {
+            if (b <= c) {
+                console.log(a, b, c);
+            } else {
+                console.log(a, c, b);
+            }
+        } else if (b <= a && b <= c) {
+            if (a <= c) {
+                console.log(b, a, c);
+            } else {
+                console.log(b, c, a);
+            }
+        } else {
+            if (a <= b) {
+                console.log(c, a, b);
+            } else {
+                console.log(c, b, a);
+            }
+        }
+    } else if (i === 2) {
+        // Escrever os valores em ordem decrescente
+        if (a >= b && a >= c) {
+            if (b >= c) {
+                console.log(a, b, c);
+            } else {
+                console.log(a, c, b);
+            }
+        } else if (b >= a && b >= c) {
+            if (a >= c) {
+                console.log(b, a, c);
+            } else {
+                console.log(b, c, a);
+            }
+        } else {
+            if (a >= b) {
+                console.log(c, a, b);
+            } else {
+                console.log(c, b, a);
+            }
+        }
+    } else if (i === 3) {
+        // Colocar o maior valor entre os outros dois
+        if (a >= b && a >= c) {
+            if (b >= c) {
+                console.log(b, a, c);
+            } else {
+                console.log(c, a, b);
+            }
+        } else if (b >= a && b >= c) {
+            if (a >= c) {
+                console.log(a, b, c);
+            } else {
+                console.log(c, b, a);
+            }
+        } else {
+            if (a >= b) {
+                console.log(a, c, b);
+            } else {
+                console.log(b, c, a);
+            }
+        }
+    } else {
+        console.log("Valor de i inválido.");
+    }
+}
+
+// Obter os valores i, a, b, c do usuário
+var i = parseInt(prompt("Digite o valor de i (1, 2 ou 3):"));
+var a = parseFloat(prompt("Digite o valor de a:"));
+var b = parseFloat(prompt("Digite o valor de b:"));
+var c = parseFloat(prompt("Digite o valor de c:"));
+
+// Chamar a função para ordenar os valores de acordo com i
+ordenarValores(i, a, b, c)
+</script>

@@ -1,0 +1,33 @@
+<script>
+ // Solicita ao usuário que insira o número do mês
+var mesNumero = prompt("Digite o número do mês (entre 1 e 12):");
+
+// Converte o número do mês para inteiro
+mesNumero = parseInt(mesNumero);
+
+// Array com os nomes dos meses
+var meses = [
+  "Janeiro",
+  "Fevereiro",
+  "Março",
+  "Abril",
+  "Maio",
+  "Junho",
+  "Julho",
+  "Agosto",
+  "Setembro",
+  "Outubro",
+  "Novembro",
+  "Dezembro"
+];
+
+// Verifica se o número do mês está dentro do intervalo válido
+if (mesNumero >= 1 && mesNumero <= 12) {
+  // Mostra o mês correspondente
+  var mesCorrespondente = meses[mesNumero - 1];
+  alert("O mês correspondente é: " + mesCorrespondente);
+} else {
+  // Caso o número do mês seja inválido
+  alert("Número de mês inválido. Por favor, insira um número entre 1 e 12.");
+}   
+</script>

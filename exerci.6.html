@@ -1,0 +1,33 @@
+<script>
+    // Função para calcular se houve lucro, prejuízo ou empate
+function calcularResultado(precoCusto, precoVenda) {
+    if (precoVenda > precoCusto) {
+        return "Lucro";
+    } else if (precoVenda < precoCusto) {
+        return "Prejuízo";
+    } else {
+        return "Empate";
+    }
+}
+
+// Recebe o preço de custo e o preço de venda do primeiro produto
+var precoCusto1 = parseFloat(prompt("Digite o preço de custo do primeiro produto:"));
+var precoVenda1 = parseFloat(prompt("Digite o preço de venda do primeiro produto:"));
+
+// Calcula e exibe o resultado para o primeiro produto
+var resultado1 = calcularResultado(precoCusto1, precoVenda1);
+alert("Resultado do primeiro produto: " + resultado1);
+
+// Recebe o preço de custo e o preço de venda do segundo produto
+var precoCusto2 = parseFloat(prompt("Digite o preço de custo do segundo produto:"));
+var precoVenda2 = parseFloat(prompt("Digite o preço de venda do segundo produto:"));
+
+// Calcula e exibe o resultado para o segundo produto
+var resultado2 = calcularResultado(precoCusto2, precoVenda2);
+alert("Resultado do segundo produto: " + resultado2);
+
+// Calcula a média de preço de custo e preço de venda
+var mediaCusto = (precoCusto1 + precoCusto2) / 2;
+var mediaVenda = (precoVenda1 + precoVenda2) / 2;
+alert("Média de preço de custo: " + mediaCusto.toFixed(2) + "\nMédia de preço de venda: " + mediaVenda.toFixed(2));
+</script>

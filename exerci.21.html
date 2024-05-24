@@ -1,0 +1,45 @@
+<script>
+  // Solicita o nome, idade e grupo de risco ao usuário
+var nome = prompt("Digite o nome do pretendente:");
+var idade = parseInt(prompt("Digite a idade do pretendente:"));
+var grupoRisco = prompt("Digite o grupo de risco do pretendente (b, m ou a):");
+
+// Verifica se a idade está na faixa necessária
+if (idade < 17 || idade > 70) {
+    alert("Idade fora da faixa necessária (17 a 70 anos)!");
+} else {
+    // Determina a categoria do seguro com base na idade e no grupo de risco
+    var codigoSeguro;
+
+    if (idade >= 17 && idade <= 25) {
+        if (grupoRisco === 'b') {
+            codigoSeguro = 1;
+        } else if (grupoRisco === 'm') {
+            codigoSeguro = 2;
+        } else {
+            codigoSeguro = 3;
+        }
+    } else if (idade >= 26 && idade <= 40) {
+        if (grupoRisco === 'b') {
+            codigoSeguro = 4;
+        } else if (grupoRisco === 'm') {
+            codigoSeguro = 5;
+        } else {
+            codigoSeguro = 6;
+        }
+    } else {
+        if (grupoRisco === 'b') {
+            codigoSeguro = 7;
+        } else if (grupoRisco === 'm') {
+            codigoSeguro = 8;
+        } else {
+            codigoSeguro = 9;
+        }
+    }
+
+    // Exibe o código do seguro, nome e idade do pretendente
+    alert("Código do seguro: " + codigoSeguro +
+          "\nNome do pretendente: " + nome +
+          "\nIdade do pretendente: " + idade);
+}  
+</script>

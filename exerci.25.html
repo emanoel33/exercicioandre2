@@ -1,0 +1,28 @@
+<script>
+ function emitirNotificacaoIndustria() {
+    // Obter o índice de poluição medido
+    var indicePoluicao = parseFloat(prompt("Digite o índice de poluição medido:"));
+
+    // Verificar qual grupo de indústrias deve ser notificado
+    if (indicePoluicao >= 0.5) {
+        // Notificar todos os grupos de indústrias
+        console.log("O índice de poluição atingiu 0.5.");
+        console.log("Todos os grupos de indústrias devem paralisar suas atividades.");
+    } else if (indicePoluicao >= 0.4) {
+        // Notificar os grupos 1 e 2
+        console.log("O índice de poluição atingiu 0.4.");
+        console.log("Os grupos 1 e 2 devem suspender suas atividades.");
+    } else if (indicePoluicao >= 0.3) {
+        // Notificar apenas o grupo 1
+        console.log("O índice de poluição atingiu 0.3.");
+        console.log("O grupo 1 deve suspender suas atividades.");
+    } else {
+        // Índice dentro dos limites aceitáveis
+        console.log("O índice de poluição está dentro dos limites aceitáveis.");
+        console.log("Não é necessário emitir notificações.");
+    }
+}
+
+// Chamar a função para emitir a notificação adequada
+emitirNotificacaoIndustria();   
+</script>

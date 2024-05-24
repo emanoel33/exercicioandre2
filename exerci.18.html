@@ -1,0 +1,34 @@
+<script>
+    // Solicita o salário ao usuário
+var salario = parseFloat(prompt("Digite o salário do funcionário:"));
+
+// Solicita o cargo ao usuário
+var cargo = prompt("Digite o cargo do funcionário:");
+
+// Define o aumento de acordo com o cargo ou o aumento padrão
+var aumento;
+switch (cargo) {
+    case "Gerente":
+        aumento = salario * 0.1;
+        break;
+    case "Supervisor":
+        aumento = salario * 0.05;
+        break;
+    case "Atendente":
+        aumento = salario * 0.03;
+        break;
+    default:
+        aumento = salario * 0.4; // Aumento padrão de 40%
+}
+
+// Calcula o novo salário
+var novoSalario = salario + aumento;
+
+// Calcula a diferença
+var diferenca = novoSalario - salario;
+
+// Exibe os resultados
+alert("Salário antigo: R$" + salario.toFixed(2) +
+      "\nNovo salário: R$" + novoSalario.toFixed(2) +
+      "\nDiferença: R$" + diferenca.toFixed(2));
+</script>

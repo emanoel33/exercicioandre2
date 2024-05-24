@@ -1,0 +1,27 @@
+<script>
+function calcularAreaTriangulo() {
+    // Obter os valores dos lados do triângulo
+    var a = parseInt(prompt("Digite o valor do lado a:"));
+    var b = parseInt(prompt("Digite o valor do lado b:"));
+    var c = parseInt(prompt("Digite o valor do lado c:"));
+
+    // Verificar se os valores formam um triângulo
+    if (a + b > c && a + c > b && b + c > a) {
+        // Calcular o semiperímetro
+        var s = (a + b + c) / 2;
+        
+        // Calcular a área usando a fórmula de Herão
+        var area = Math.sqrt(s * (s - a) * (s - b) * (s - c));
+
+        // Exibir a área do triângulo
+        console.log("Os valores formam um triângulo.");
+        console.log("A área do triângulo é: " + area.toFixed(2));
+    } else {
+        // Se os valores não formarem um triângulo, exibir uma mensagem de erro
+        console.log("Os valores não formam um triângulo.");
+    }
+}
+
+// Chamar a função para calcular a área do triângulo
+calcularAreaTriangulo();    
+</script>

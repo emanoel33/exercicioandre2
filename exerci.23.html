@@ -1,0 +1,35 @@
+<script>
+   function calcularDuracaoDoJogo() {
+    // Obter a hora de início do jogo
+    var horaInicio = parseInt(prompt("Digite a hora de início do jogo (apenas horas inteiras):"));
+
+    // Verificar se a entrada é válida
+    if (isNaN(horaInicio) || horaInicio < 0 || horaInicio > 23) {
+        alert("Por favor, insira uma hora válida (entre 0 e 23).");
+        return;
+    }
+
+    // Obter a hora do final do jogo
+    var horaFinal = parseInt(prompt("Digite a hora do final do jogo (apenas horas inteiras):"));
+
+    // Verificar se a entrada é válida
+    if (isNaN(horaFinal) || horaFinal < 0 || horaFinal > 23) {
+        alert("Por favor, insira uma hora válida (entre 0 e 23).");
+        return;
+    }
+
+    // Calcular a duração do jogo
+    var duracao;
+    if (horaFinal >= horaInicio) {
+        duracao = horaFinal - horaInicio;
+    } else {
+        duracao = (24 - horaInicio) + horaFinal;
+    }
+
+    // Exibir a duração do jogo
+    alert("A duração do jogo é de " + duracao + " horas.");
+}
+
+// Chamar a função para calcular a duração do jogo
+calcularDuracaoDoJogo(); 
+</script>

@@ -1,0 +1,36 @@
+<script>
+// Solicita os valores A, B e C ao usuário
+var valorA = parseFloat(prompt("Digite o valor de A:"));
+var valorB = parseFloat(prompt("Digite o valor de B:"));
+var operador = prompt("Digite o operador aritmético (+, -, *, /):");
+
+// Verifica se o operador é válido
+if (operador === '+' || operador === '-' || operador === '*' || operador === '/') {
+    // Verifica se o operador é divisão e se o divisor é zero
+    if (operador === '/' && valorB === 0) {
+        alert("Erro: Divisão por zero!");
+    } else {
+        // Executa a operação conforme o operador
+        var resultado;
+        switch (operador) {
+            case '+':
+                resultado = valorA + valorB;
+                break;
+            case '-':
+                resultado = valorA - valorB;
+                break;
+            case '*':
+                resultado = valorA * valorB;
+                break;
+            case '/':
+                resultado = valorA / valorB;
+                break;
+        }
+        // Exibe o resultado
+        alert("Resultado da operação: " + resultado);
+    }
+} else {
+    // Exibe mensagem de operador não definido se o operador for inválido
+    alert("Operador não definido!");
+}
+</script>

@@ -1,0 +1,41 @@
+<script>
+    // Solicita o nível do professor
+var nivelProfessor = prompt("Digite o nível do professor (1 para Nível 1, 2 para Nível 2, 3 para Nível 3):");
+
+// Converte o nível do professor para número
+nivelProfessor = parseInt(nivelProfessor);
+
+// Verifica se o nível do professor é válido
+if (nivelProfessor !== 1 && nivelProfessor !== 2 && nivelProfessor !== 3) {
+    alert("Nível do professor inválido!");
+} else {
+    // Solicita a quantidade de horas/aula ministradas
+    var horasAula = prompt("Digite a quantidade de horas/aula ministradas:");
+
+    // Converte a quantidade de horas/aula para número
+    horasAula = parseFloat(horasAula);
+
+    // Verifica se a quantidade de horas/aula é válida
+    if (isNaN(horasAula) || horasAula <= 0) {
+        alert("Quantidade de horas/aula inválida!");
+    } else {
+        var valorHoraAula;
+
+        // Define o valor da hora/aula de acordo com o nível do professor
+        if (nivelProfessor === 1) {
+            valorHoraAula = 12.00;
+        } else if (nivelProfessor === 2) {
+            valorHoraAula = 17.00;
+        } else {
+            valorHoraAula = 25.00;
+        }
+
+        // Calcula o salário do professor
+        var salario = horasAula * valorHoraAula;
+
+        // Exibe o salário do professor
+        alert("O salário do professor é: R$" + salario.toFixed(2));
+    }
+}
+
+</script>

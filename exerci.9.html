@@ -1,0 +1,23 @@
+<script>
+// Pedindo ao usuário para inserir o peso dos peixes
+var peso = parseFloat(prompt("Digite o peso dos peixes (em quilos):"));
+
+// Verificando se há excesso de peso
+if (peso > 50) {
+    // Calculando o excesso de peso
+    var excesso = peso - 50;
+    
+    // Calculando o valor da multa
+    var multa = excesso * 4;
+
+    // Mostrando o valor do excesso e da multa
+    console.log("Excesso de peso:", excesso.toFixed(2), "quilos");
+    console.log("Multa a pagar: R$", multa.toFixed(2));
+} else {
+    // Se não houver excesso, mostrando que as variáveis estão zeradas
+    var excesso = 0;
+    var multa = 0;
+    console.log("Excesso de peso:", excesso.toFixed(2), "quilos");
+    console.log("Multa a pagar: R$", multa.toFixed(2));
+}    
+</script>

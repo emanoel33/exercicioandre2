@@ -1,0 +1,29 @@
+<script>
+    
+// Solicita as notas ao usuário
+var nota1 = parseFloat(prompt("Digite a primeira nota:"));
+var nota2 = parseFloat(prompt("Digite a segunda nota:"));
+var nota3 = parseFloat(prompt("Digite a terceira nota:"));
+
+// Solicita a opção de média ao usuário
+var opcao = parseInt(prompt("Escolha o tipo de média a ser calculada:\n1 - Média Aritmética\n2 - Média Ponderada"));
+
+// Verifica se a opção é válida
+if (opcao !== 1 && opcao !== 2) {
+    alert("Opção inválida!");
+} else {
+    var media;
+
+    // Calcula a média de acordo com a opção escolhida
+    if (opcao === 1) {
+        // Média Aritmética
+        media = (nota1 + nota2 + nota3) / 3;
+    } else {
+        // Média Ponderada
+        media = (nota1 * 3 + nota2 * 3 + nota3 * 4) / 10;
+    }
+
+    // Exibe o resultado
+    alert("A média é: " + media.toFixed(2));
+}
+</script>

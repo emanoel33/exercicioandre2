@@ -1,0 +1,40 @@
+<script>
+    // Solicita o tipo de cliente
+var tipoCliente = prompt("Digite o tipo de cliente (1 para Residência, 2 para Comércio, 3 para Indústria):");
+
+// Converte o tipo de cliente para número
+tipoCliente = parseInt(tipoCliente);
+
+// Verifica se o tipo de cliente é válido
+if (tipoCliente !== 1 && tipoCliente !== 2 && tipoCliente !== 3) {
+    alert("Tipo de cliente inválido!");
+} else {
+    // Solicita a quantidade de kWh consumidos
+    var kWhConsumidos = prompt("Digite a quantidade de kWh consumidos:");
+
+    // Converte a quantidade de kWh consumidos para número
+    kWhConsumidos = parseFloat(kWhConsumidos);
+
+    // Verifica se a quantidade de kWh consumidos é válida
+    if (isNaN(kWhConsumidos) || kWhConsumidos <= 0) {
+        alert("Quantidade de kWh inválida!");
+    } else {
+        var valorKWh;
+
+        // Define o valor do kWh de acordo com o tipo de cliente
+        if (tipoCliente === 1) {
+            valorKWh = 0.60;
+        } else if (tipoCliente === 2) {
+            valorKWh = 0.48;
+        } else {
+            valorKWh = 1.29;
+        }
+
+        // Calcula o valor da conta de luz
+        var valorConta = kWhConsumidos * valorKWh;
+
+        // Exibe o valor da conta de luz
+        alert("O valor da sua conta de luz é: R$" + valorConta.toFixed(2));
+    }
+}
+</script>
